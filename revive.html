@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carouselList{
+            flex: 1;
+            max-width: 800px;
+        }
+
+        .carousel {
+      display: flex;
+      justify-content: space-around;
+      flex-shrink: 0;
+      width: 33.333333%; /* Shows roughly three images at a time */
+      padding: 0 1rem;
+      max-width: 1200px;
+      transition: all 0.5s ease-in-out;
+      margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .carousel img {
+      width: 200px;
+      flex: 1;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        
+    </style>
+</head>
+<body class="bg-gray-900 flex text-center justify-center min-h-screen">
+    <div class="flex flex-col items-center">
+    <div class="ml-20 p-8 flex flex-row ">
+        <div class="flex flex-col gap-2 items-center ">
+            <h1 class=" text-6xl font-bold text-white">REVIVE CLUB</h1>
+            <a href="innerpage.html" class="text-gray-500 hover:text-xl ">Click to Return </a>
+        </div>
+        <img class="ml-8 w-20 h-20" src="image\revive.png">
+    </div>
+
+    <div class="mb-20 relative w-full max-w-5xl mx-auto overflow-hidden" >
+        <div id= "carouselList" class="carouselList flex transition-transform duration-500 ease-in-out">
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6850.jpg">
+            </div>
+            <div class="carousel scale-110  opacity-100">
+                <img src="image\revive\IMG_6851.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6852.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6853.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6854.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6855.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6856.jpg">
+            </div>
+            <div class="carousel opacity-50">
+                <img src="image\revive\IMG_6857.jpg">
+            </div>
+            
+        </div>
+
+        <button id="leftBTN" class="h-10 w-10 absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none">
+            <img src="image\arrow-left.png">
+        </button>
+        <button id="rightBTN" class="h-10 w-10 absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none" >
+            <img src="image\arrow-right.png">
+        </button>
+
+    </div>
+    
+    
+
+    <div class="fixed bottom-40 gap-4 flex flex-col items-center justify-center">
+        <p class="text-gray-500">To know more and stay updated on everything related to REVIVE check their Instagram page!</p>
+        <a href="https://www.instagram.com/revive.guc/" target="_blank" class="hover:bg-blue-500 flex items-center justify-center p-4 h-10 w-40  bg-blue-300 rounded-lg ">Click Here!</a>
+    </div>
+    
+    <div class="fixed bottom-0 left-0  w-screen bg-transparent flex flex-col items-center ">
+                    <div class=" flex flex-row  items-center gap-4 mt-3">
+                        <a href="https://www.linkedin.com/in/malak-abdulgawad/" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\cropped_circle_image.png" >
+                        </a>
+                        <a href="mailto:malak.abdulgawad1934@gmail.com" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\cropped_circle_image (1).png" >
+                        </a>
+                        <a href="https://www.instagram.com/_some1.unknown/" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\insta.png" >
+                        </a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/malak-abdulgawad/" target="_blank" class="text-1xl font-semibold mb-3 mt-2 text-white text-center underline"> Developed by Malak Abdulgawad</a>
+                    <h2 class=" text-white text-center text-white" >©2025 GUC Club Explorer. All rights reserved.</h2>
+                </div>
+        </div>
+
+    <script>
+        const lBtn= document.getElementById('leftBTN');
+        const rBtn= document.getElementById('rightBTN');
+        const cList= document.getElementById('carouselList');
+        const items= cList.querySelectorAll('.carousel');
+        const totalItems= items.length;
+        let currentIndex=1;
+
+        const updatedC = () =>{
+            const itemWidth = items[0].offsetWidth;
+            const offset = -(currentIndex - 1) * itemWidth;
+            cList.style.transform = `translateX(${offset}px)`;
+            items.forEach((item, index) => {
+                item.classList.remove('scale-110', 'opacity-100');
+                item.classList.add('opacity-50');
+
+                if (index === currentIndex) {
+                    item.classList.add('scale-110', 'opacity-100');
+                     item.classList.remove('opacity-50');
+                }
+            });
+        };
+
+        rBtn.addEventListener('click', ()=>{
+            currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+            updatedC();
+
+        });
+
+        lBtn.addEventListener('click',()=>{
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+            updatedC();
+
+        });
+        updatedC();
+        window.addEventListener('resize', updatedC);
+
+        
+    </script>
+</body>
+</html>

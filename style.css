@@ -1,0 +1,29 @@
+@keyframes bounce-continuous {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-bounce-continuous {
+            animation: bounce-continuous 1.5s infinite ease-in-out;
+        }
+
+
+body {
+    height: 100vh;
+    cursor: none;
+}
+
+#cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+    transition: transform 0.1s ease-out;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+}

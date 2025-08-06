@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUC CLUB EXPLORER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes bounce-continuous {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px) translateX(20px); }
+        }
+     .animate-bounce-continuous {
+            animation: bounce-continuous 4s infinite ease-in-out;
+        }
+
+    @keyframes bounce-cont{
+            50% { transform: translateY(0); }
+            0%, 100%  { transform: translateY(-20px) translateX(20px); }
+        }
+     .animate-bounce-cont {
+            animation: bounce-cont 4s infinite ease-in-out;
+        }
+
+
+    .cluster-container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    .sphere-anchor {
+      position: absolute;
+      border-radius: 50%;
+      background-image: url('image/ball.png');
+      background-size: cover;
+      background-position: center;
+        
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      color: white; 
+      font-weight: bold ;
+      
+    }
+
+    /* Individual classes for the 12 spheres */
+    .sphere-1 { width: 200px; height: 200px; top: -80px; left: -80px; z-index: 5; }
+    .sphere-2 { width: 180px; height: 180px; top: -90px; left: 130px; z-index: 4; }
+    .sphere-3 { width: 140px; height: 140px; top: 10px; right: -70px; z-index: 5; }
+    .sphere-4 { width: 180px; height: 180px; top: 120px; left: -50px; z-index: 3; }
+    .sphere-5 { width: 200px; height: 200px; top: 300px; left: 30px; z-index: 2; }
+    .sphere-6 { width: 150px; height: 150px; top: 330px; right: 140px; z-index: 2; }
+    .sphere-7 { width: 190px; height: 190px; top: 150px; right: -20px; z-index: 3; }
+    .sphere-8 { width: 200px; height: 200px; bottom: -70px; left: -170px; z-index: 6; }
+    .sphere-9 { width: 150px; height: 150px; bottom: 200px; left: -200px; z-index: 1; }
+    .sphere-10 { width: 180px; height: 180px; bottom: -140px; right: -40px; z-index: 1; }
+    .sphere-11 { width: 140px; height: 140px; bottom: 460px; right: 420px; z-index: 6; }
+    .sphere-12 { width: 200px; height: 200px; top: -80px; left: 320px; z-index: 7; }
+    .sphere-13 { width: 270px; height: 270px; top: 80px; left: 150px; z-index: 7; }
+    .sphere-14 { width: 150px; height: 150px; top: -190px; left: 490px; z-index: 7; }
+    .sphere-15 { width: 110px; height: 110px; top: -170px; left: 280px; z-index: 7; }
+    
+  </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+
+  <div class="cluster-container">
+    <a href="ieee.html" class="animate-bounce-continuous sphere-anchor sphere-1">IEEE</a>
+    <a href="inspire.html" class="animate-bounce-cont sphere-anchor sphere-2">INSPIRE</a>
+    <a href="insider.html" class="animate-bounce-continuous sphere-anchor sphere-3">INSIDER</a>
+    <a href="revive.html" class="animate-bounce-cont sphere-anchor sphere-4">REVIVE</a>
+    <a href="music-ensemble.html" class="animate-bounce-continuous sphere-anchor sphere-5">MUSIC ENSEMBLE</a>
+    <a href="athar.html" class="animate-bounce-cont sphere-anchor sphere-6">ATHAR</a>
+    <a href="innovators.html" class="animate-bounce-cont sphere-anchor sphere-7">INNOVATORS</a>
+    <a href="cura.html" class="animate-bounce-cont  sphere-anchor sphere-8">CURA</a>
+    <a href="tcs.html" class="animate-bounce-cont  sphere-anchor sphere-9">TCS</a>
+    <a href="ayb.html" class="animate-bounce-continuous sphere-anchor sphere-10">AYB</a>
+    <a href="vgs.html" class="animate-bounce-cont  sphere-anchor sphere-11">VGS</a>
+    <a href="mun.html" class="animate-bounce-cont  sphere-anchor sphere-12">MUN</a>
+    <a href="el-warsha.html" class="animate-bounce-cont sphere-anchor sphere-14">EL WARSHA</a>
+    <a href="tedx.html" class="animate-bounce-cont sphere-anchor sphere-15">TEDX</a>
+    <a href="index.html" class="font-extrabold text-2xl sphere-anchor sphere-13 flex-col ">GUC CLUBS<span class="font-light text-sm">click on each to know more!</span></a>
+  </div>
+
+  <div class="fixed bottom-0 left-0  w-screen bg-transparent flex flex-col items-center">
+                    <div class=" flex flex-row  items-center gap-4 mt-3">
+                        <a href="https://www.linkedin.com/in/malak-abdulgawad/" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\cropped_circle_image.png" >
+                        </a>
+                        <a href="mailto:malak.abdulgawad1934@gmail.com" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\cropped_circle_image (1).png" >
+                        </a>
+                        <a href="https://www.instagram.com/_some1.unknown/" target="_blank" class="w-9 h-9 hover:scale-105"> <img src="image\insta.png" >
+                        </a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/malak-abdulgawad/" target="_blank" class="text-1xl font-semibold mb-3 mt-2 text-white text-center underline"> Developed by Malak Abdulgawad</a>
+                    <h2 class=" text-gray-700 text-center text-white" >©2025 GUC Club Explorer. All rights reserved.</h2>
+                </div>
+        </div>
+
+</body>
+</html>
